@@ -196,7 +196,7 @@ inline sensor_msgs::CameraInfo createCameraInfoDEPTHQVGA()
 
 
   cam_info_msg.distortion_model = "plumb_bob";
-  cam_info_msg.D = boost::assign::list_of(-0.014457)(-0.102659)(0.011322)(0.004514)(0);
+  cam_info_msg.D = boost::assign::list_of(-0.014457)(-0.102659)(0.011322)(0.004514)(0).convert_to_container<std::vector<double> >();
 
   cam_info_msg.R = boost::array<double, 9>{{ 1, 0, 0, 0, 1, 0, 0, 0, 1 }};
 
